@@ -12,51 +12,15 @@
     <p>参考サイト</p>
     <a href="https://jp.vuejs.org/v2/guide/index.html" target="_blank">Vue.js はじめに<a>
     <p>他のページ</p>
-    <a href="./free.html">自由に色々やってみるページ<a>
-    <div id="app">
-      <h2>
-        app1
-      </h2>
-      {{ message }}
-    </div>
-    <div id="app-2">
-      <h2>
-        app2
-      </h2>
-      <span v-bind:title="message">
-        Hover your mouse over me for a few seconds
-        to see my dynamically bound title"
-      </span>
-    </div>
-    <div id="app-3">
-      <h2>
-        app3
-      </h2>
-      <span v-if="seen">Now you see me</span>
-    </div>
-    <div id="app-4">
-      <h2>
-        app4
-      </h2>
-      <ol>
-        <li v-for="todo in todos">
-          {{ todo.text }}
-        </li>
-      </ol>
-    </div>
+    <a href="./index.html">Basic Case<a>
     <div id="app-5">
       <h2>
         app5
       </h2>
-      <p>{{ message }}</p>
-      <button v-on:click="reverseMessage">Reverse Message</button>
-    </div>
-    <div id="app-6">
-      <h2>
-        app6
-      </h2>
-      <p>{{ message }}</p>
+      <p>元の文章: {{ message }}</p>
+      <p>逆さまにした文章: {{ reversedMessage }}</p>
       <input v-model="message">
+      <button v-on:click="reverseMessage">Reverse Message</button>
     </div>
     <div id="app-7">
       <h2>
@@ -74,9 +38,11 @@
           v-bind:key="item.id"
         ></todo-item>
       </ol>
+      <input id="add_data">
+      <button v-on:click="addList">add List</button>
     </div>
     <!-- 開発バージョン、便利なコンソールの警告が含まれています -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/free.js"></script>
   </body>
 </html>
