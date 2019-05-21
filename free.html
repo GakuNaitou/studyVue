@@ -7,15 +7,16 @@
   </head>
   <body>
     <h1>
-      Basic Cace
+      自由に書いてみる
     </h1>
     <p>参考サイト</p>
     <a href="https://jp.vuejs.org/v2/guide/index.html" target="_blank">Vue.js はじめに<a>
     <p>他のページ</p>
-    <a href="./index.html">Basic Case<a>
+    <a href="./index.html">Vueの基本の使い方<a>
+    <a href="./vuetify.html">vuetify使ってみるページ<a>
     <div id="app-5">
       <h2>
-        app5
+        入力した文を逆さまにする。ボタンを押すとデータを逆さまにする
       </h2>
       <p>元の文章: {{ message }}</p>
       <p>逆さまにした文章: {{ reversedMessage }}</p>
@@ -24,22 +25,21 @@
     </div>
     <div id="app-7">
       <h2>
-        app7
+        リストを入れたり消したりできる。確認ポップアップもする。
       </h2>
-      <ol>
-        <!--
-          各 todo-item の内容を表す todo オブジェクトを与えます。
-          これにより内容は動的に変化します。
-          また後述する "key" を各コンポーネントに提供する必要があります。
-        -->
-        <todo-item
-          v-for="item in groceryList"
-          v-bind:todo="item"
-          v-bind:key="item.id"
-        ></todo-item>
-      </ol>
-      <input id="add_data">
-      <button v-on:click="addList">add List</button>
+      <p v-show="groceryList.length">リストの数は{{ groceryList.length }}個！</p>
+      <ul>
+        <li v-for="(item, index) in groceryList">
+          <!-- <input type="checkbox" v-model="todo.isDone"> -->
+          <span>{{ item.text }}</span>
+          <span @click="deleteItem(index)" class="command">[x]</span>
+        </li>
+      </ul>
+      <p v-show="!groceryList.length">何もないよ！</p>
+      <form @submit.prevent="addItem">
+        <input type="text" v-model="newItem">
+        <input type="submit" value="Add">
+      </form>
     </div>
     <!-- 開発バージョン、便利なコンソールの警告が含まれています -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

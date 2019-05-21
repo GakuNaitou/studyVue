@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+  <h1>
+    Vuetify使ってみる
+  </h1>
+  <p>参考サイト</p>
+  <a href="https://jp.vuejs.org/v2/guide/index.html" target="_blank">Vue.js はじめに<a>
+  <p>他のページ</p>
+  <a href="./index.html">vueの基本の使い方<a>
+  <a href="./free.html">自由に色々やってみるページ<a>
+  <div id="app">
+    <v-app>
+      <v-flex xs12 sm6 md1>
+        <v-btn color="success">
+          Success
+        </v-btn>
+      </v-flex>
+      <v-flex xs12 sm6 md1>
+        <v-btn flat icon color="pink">
+          <v-icon>favorite</v-icon>
+        </v-btn>
+      </v-flex>
+      <v-flex xs12 sm6 md1>
+        <v-text-field
+          label="solo"
+          solo
+          class="hoge"
+        ></v-text-field>
+      </v-flex>
+      <v-flex xs12 sm6 md3>
+        <v-textarea
+            name="input-7-1"
+            label="Default style"
+            value=""
+            hint="ヒント: hogehoge"
+          ></v-textarea>
+      </v-flex>
+    </v-app>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
+  <script>
+    new Vue({ el: '#app' })
+  </script>
+</body>
+</html>

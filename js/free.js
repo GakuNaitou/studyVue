@@ -67,16 +67,22 @@ var app7 = new Vue({
     groceryList: [
       { id: 0, text: 'Vegetables' },
       { id: 1, text: 'Cheese' },
-      { id: 2, text: 'Whatever else humans are supposed to eat' },
-      { id: 3, text: 'Whatever else humans are supposed to eat' }
+      { id: 2, text: 'Whatever else humans are supposed to eat' }
     ]
   },
-  method: {
-    addList: function () {
-      this.groceryList.push({
-        id: 4,
-        text: "hogehoge"
-       })
-    }
+  methods: {
+      addItem: function() {
+        var item = {
+          text: this.newItem
+        };
+        this.groceryList.push(item);
+        this.newItem = '';
+      },
+      deleteItem: function(index) {
+        if (confirm('are you sure?')) {
+          this.groceryList.splice(index, 1);
+        }
+      }
   }
+
 })

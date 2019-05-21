@@ -10,3 +10,8 @@ div {
   border: none;
   background-color: #f5f5f5;
 }
+
+.command {
+  cursor : pointer;
+  color: blue;
+}
