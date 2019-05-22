@@ -14,8 +14,78 @@
   <p>他のページ</p>
   <a href="./index.html">vueの基本の使い方<a>
   <a href="./free.html">自由に色々やってみるページ<a>
+  <a href="./atoms.html">atoms<a>
+  <h2>hoge</h2>
   <div id="app">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+
     <v-app>
+      <v-container grid-list-md text-xs-center>
+        <v-layout row wrap>
+          <v-flex xs12>
+            <v-card dark color="primary">
+              <v-card-text class="px-0">12</v-card-text>
+            </v-card>
+          </v-flex>
+          <v-flex v-for="i in 2" :key="`6${i}`" xs6>
+            <v-card dark color="secondary">
+              <v-card-text class="px-0">6</v-card-text>
+            </v-card>
+          </v-flex>
+          <v-flex v-for="i in 3" :key="`4${i}`" xs4>
+            <v-card dark color="primary">
+              <v-card-text class="px-0">4</v-card-text>
+            </v-card>
+          </v-flex>
+          <v-flex v-for="i in 4" :key="`3${i}`" xs3>
+            <v-card dark color="secondary">
+              <v-card-text class="px-0">3</v-card-text>
+            </v-card>
+          </v-flex>
+          <v-flex v-for="i in 6" :key="`2${i}`" xs2>
+            <v-card dark color="primary">
+              <v-card-text class="px-0">2</v-card-text>
+            </v-card>
+          </v-flex>
+          <v-flex v-for="i in 12" :key="`1${i}`" xs1>
+            <v-card dark color="secondary">
+              <v-card-text class="px-0">1</v-card-text>
+            </v-card>
+          </v-flex>
+        </v-layout>
+      </v-container>
+
+
+      <v-container>
+        <v-layout>
+          <v-text-field
+            label="solo1"
+            single-line
+            outline
+            color="#3079D9"
+          >
+          </v-text-field>
+          <v-text-field
+            label="solo2"
+            single-line
+            outline
+            class="hoge"
+          >
+          </v-text-field>
+          <v-text-field
+            label="solo3"
+            single-line
+            outline
+            class="hoge"
+          >
+          </v-text-field>
+        </v-layout>
+      </v-container>
+
+
+
       <v-flex xs12 sm6 md1>
         <v-btn color="success">
           Success

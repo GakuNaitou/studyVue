@@ -1,0 +1,65 @@
+@charset "UTF-8";
+body {
+  font-family: "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif;
+  width: 90%;
+  margin: 0 auto;
+}
+
+div.content {
+  width: 70%;
+  margin: 40px auto;
+  padding: 24px 24px;
+  border-radius: 5px;
+  border: 1px solid #19abc4;
+}
+
+.command {
+  cursor: pointer;
+  color: blue;
+}
+
+input, textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-decoration: none;
+}
+
+input[type="text"] {
+  width: 290px;
+  height: 40px;
+}
+
+textarea {
+  width: 290px;
+  height: 120px;
+}
+
+.border_default {
+  outline: none;
+  padding: 13px 16px;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 21px;
+  letter-spacing: 0.05em;
+  box-sizing: border-box;
+  color: #6C6C6C;
+  border-radius: 5px;
+  transition: border .1s;
+  border: 1px solid #DDDDDD;
+  caret-color: #3079D9;
+}
+.border_default:hover, .border_default:focus {
+  border: 1px solid #3079D9;
+}
+
+.input_error {
+  background-color: #FFCBC3;
+  border: 1px solid #E5715F;
+}
+
+.m_10 + .m_10 {
+  margin: 10px 0 0 10px;
+}
+
+/*# sourceMappingURL=styles.css.map */
